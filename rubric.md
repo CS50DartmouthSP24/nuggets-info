@@ -1,9 +1,11 @@
-# CS50 Final Project rubric
+# CS50 Final Project Rubric
 
 This is an *initial rubric* and we reserve the right to update it based on things that come up after posting the rubric.
 This page provides detail on the published grade breakdown.
 
-## Design spec & review (15%)
+---
+
+## Design spec (15%)
 
 ### Teams of 3 students:
 
@@ -23,18 +25,16 @@ We grade this section out of 26 points.
 
 **Server (16):**
 
-* (2) User interface
-* (2) Inputs and outputs
-* (2) Functional decomposition into functions/modules
+* (4) Inputs and outputs
+* (4) Functional decomposition into functions/modules
 * (4) Major data structures
-* (4) High-level pseudo code (plain English-like language) for logic/algorithmic flow
-* (2) Testing plan, including unit tests, integration tests, system tests
+* (4) High-level pseudo code
 
 ### Teams of 4 students:
 
 We grade this section out of 38 points.
 
-#### Presentation (15 points)
+#### Presentation (10 points)
 
 "In 10 minutes you must present an *overview* of your design decisions and how your group will divide the work; the design document provides more detail. Be prepared to answer questions and receive feedback."
 
@@ -51,17 +51,16 @@ We grade this section out of 38 points.
 * (2) User interface
 * (2) Inputs and outputs
 * (4) Functional decomposition into functions/modules
-* (2) High-level pseudo code (plain English-like language) for logic/algorithmic flow
-* (2) Testing plan, including unit tests, integration tests, system tests
+* (4) High-level pseudo code
 
 **Server (16):**
 
-* (2) User interface
-* (2) Inputs and outputs
-* (2) Functional decomposition into functions/modules
+* (4) Inputs and outputs
+* (4) Functional decomposition into functions/modules
 * (4) Major data structures
-* (4) High-level pseudo code (plain English-like language) for logic/algorithmic flow
-* (2) Testing plan, including unit tests, integration tests, system tests
+* (4) High-level pseudo code
+
+---
 
 ## Implementation spec (15%)
 
@@ -94,25 +93,11 @@ We grade this section out of 38 points.
 * (2) testing plan (server)
 * (2) testing plan (client)
 
-## Code style and quality (25%)
+---
 
-See *[CS50 coding style standard]({{logistics}}/style.md)*.
+## Code style and quality (15%)
 
-* code should be well-organized with sensible filenames and subdirectories
-* brief `README.md` in each directory
-* clear Makefile for clean and build
-* clear and consistent style
-* clear code design, functional decomposition, naming
-* clear code logic and flow
-* at most one global variable in each program
-* good choice of, and use of, data structures
-* good modularity (strong cohesion, loose coupling)
-* good in-code documentation (comments)
-* code is consistent with documentation (IMPLEMENTATION.md)
-* defensive programming (error checking, malloc, etc.)
-
-<!--
-## Final presentation (15%)
+See *CS50 coding standards* in `logistics/style.md` within this term's home-private repo.
 
 We grade this section out of 15 points.
 
@@ -121,25 +106,24 @@ We grade this section out of 15 points.
 * (2) identify known limitations of implementation
 * (1) show a new, nontrivial map
 * (8) game runs smoothly, demonstrating that the core requirements work:
-	* spectator mode
-	* multiple players
-	* visibility - "known" and "sees"
-	* gold collection
-	* game over
--->
+  * spectator mode
+  * multiple players
+  * visibility - "known" and "sees"
+  * gold collection
+  * game over
 
-## Scrum and Git practices (15%)
+## Git and Git-Flow practices (10%)
 
 Your repo *must* have a git branch `submit-final`.
 We will grade the contents of that branch as it appears on GitHub at the moment of the deadline; if you want us to grade a later commit, despite the lateness penalty, let us know.
 
 We grade this section out of 20 points.
 
-* (4) GitHub wiki shows good use of Sprint retrospectives
-* (4) GitHub Project Board shows good use of Scrum planning
-* (4) git commit history - logical groupings of changes in each commit, and meaningful commit messages.
-* (4) git commit history - good use of branches and [git-flow]({{unit}}/git-flow.md).
-* (4) no executable files, object files, core dump files, editor backup files, or extraneous files existing in any directory.
+* (6) git commit history - logical groupings of changes in each commit, and meaningful commit messages.
+* (8) git-flow - good use of branches and [git-flow](https://www.cs.dartmouth.edu/~cs50/Lectures/units/git-flow.html).
+* (6) no executable files, object files, core dump files, editor backup files, or extraneous files existing in any directory.
+
+---
 
 ## Functionally correct and complete (30%)
 
@@ -168,22 +152,36 @@ We grade this section out of 60 points.
 * (2) server tracks gold, per spec
 * (2) server produces Game Over summary, per spec
 * (2) new, valid, non-trivial mapfile
-* -
+
 * (2) client commandline, per spec
 * (6) client plays as player, per spec
 * (6) client plays as spectator, per spec
 * (4) client asks for window to grow, per spec
 * (2) client prints Game Over summary, per spec
 
+---
+## Extra Credit 
+
+| **Extra credit points** | **Extra work** <br />(likely requiring cllient and server changes) |
+| ----------------------- | ------------------------------------------------------------ |
+| up to 5                 | Gold stealing                                                |
+| up to 5                 | Set a range limit on vision, e.g., a diameter of five spots. |
+| up to 5                 | alert players when they "hear someone coming"                |
+|                         | Other extras if pre-approved by instructor                   |
+|                         |                                                              |
+---
 ## Penalties
 
-* (-1..-3) fails to compile from top-level Makefile, or compiler generates warnings
-* (-1..-5) memory leaks/errors caused by student code
-* (-1..-5) output to stdout other than what is required to play the game
-* (-1..-5) handles errors gracefully
+* (-1..3) fails to compile cleanly (no errors or warnings) from top-level Makefile
+* (-1..5) memory leaks/errors caused by *student* code
+* (-1..5) output to stdout other than what is required to play the game
+* (-1..5) doesn't handle errors gracefully
+* -10 Segmentation Faults
+
+---
 
 ## Lateness (-10%)
 
 If the `submit-final` branch appears late, we take
-**10 points per hour**, prorated by the minute and rounded down to the nearest integer, *off the top.*
+**10 points per hour**, prorated by the minute, *off the top.*
 This means that you lose (10/60 x minutesPastDeadline) points off your total project grade.
